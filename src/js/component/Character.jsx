@@ -11,7 +11,7 @@ export const Character = (props) => {
     const navigate = useNavigate()
     return (
         <div className="card mx-3 col-4" style={{ width: "18rem" }}>
-            <img className="card-img-top" src="https://thorntons-investments.co.uk/wp-content/uploads/2017/08/400x200.png"/>
+            <img className="card-img-top" src="https://imgix.ranker.com/list_img_v2/995/380995/original/380995-u2?fit=crop&fm=pjpg&q=60&dpr=2&w=1200&h=720"/>
             <p className="fs-3">{props.el.name}</p>
             <p>Gender : {props.el.gender}</p>
             <p>Hair Color : {props.el.hair_color}</p>

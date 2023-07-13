@@ -11,7 +11,7 @@ export const Vehicles = (props) => {
     const navigate = useNavigate()
     return (
         <div className="card mx-3 col-4" style={{ width: "18rem" }}>
-            <img className="card-img-top" src="https://thorntons-investments.co.uk/wp-content/uploads/2017/08/400x200.png"/>
+            <img className="card-img-top" src="https://media.contentapi.ea.com/content/dam/eacom/en-us/migrated-images/2016/11/news-article-images-ships-blog-image-16x9.jpg"/>
             <p className="fs-3">{props.el?.name}</p>
             <p>Model : {props.el?.model}</p>
             <p>Manufacturer : {props.el?.manufacturer}</p>

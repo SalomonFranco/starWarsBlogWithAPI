@@ -11,7 +11,7 @@ export const Planets = (props) => {
     const navigate = useNavigate()
     return (
         <div className="card mx-3 col-4" style={{ width: "18rem" }}>
-            <img className="card-img-top" src="https://thorntons-investments.co.uk/wp-content/uploads/2017/08/400x200.png"/>
+            <img className="card-img-top" src="https://i.pinimg.com/736x/1f/ed/a0/1feda0324aba77f182cab8667321a421--star-wars-planets-game-.jpg"/>
             <p className="fs-3">{props.el?.name}</p>
             <p>Population : {props.el?.population}</p>
             <p>Terrain : {props.el?.terrain}</p>
