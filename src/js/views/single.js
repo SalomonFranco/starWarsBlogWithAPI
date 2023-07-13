@@ -8,7 +8,7 @@ export const Single = () => {
 	const params = useParams();
 
 	useEffect(()=>{
-		actions.getCharacterDetails(params.uid)
+		actions.getCharacterDetails(params.id)
 	},[])
 
 	return (

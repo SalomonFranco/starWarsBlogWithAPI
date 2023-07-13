@@ -16,24 +16,31 @@ export const Home = () => {
 
 	return (
 		<div className="container">
+		<div className="inline-scroll">
 			<div className="row">
 			<h1 className="text-danger">Characters</h1>
 				<div className="text-center mt-5 d-flex overflow-x-auto">
-					{store.characters.map(el =>	<Character key={el.uid} el={el} />)}
+					{store.characters.map(el =>	
+					<Character key={el.uid} el={el} />)}
+				</div>
 				</div>
 			</div>	
+			<div className="inline-scroll">
 			<div className="row">
 			<h1 className="text-danger">Vehicles</h1>
 				<div className="text-center mt-5 d-flex overflow-x-auto">
-					{store.vehicles.map(el =><Vehicles key={el.uid} el={el} />)}
+					{store.vehicles.map(el =>
+					<Vehicles key={el.uid} el={el} />)}
+						</div>
 				</div>
 			</div>
-
+			<div className="inline-scroll">
 			<div className="row">
 			<h1 className="text-danger">Planets</h1>
 				<div className="text-center mt-5 d-flex overflow-x-auto">
-					{store.planets.map(el =><Planets key={el.uid} el={el} />)}
-
+					{store.planets.map(el => 
+					<Planets key={el.uid} el={el} />)}
+						</div>
 				</div>
 			</div>
 		</div>

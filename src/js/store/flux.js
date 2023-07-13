@@ -31,9 +31,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 				console.log(data.results);
 			},
 			getCharacterDetails: async (uid) => {
-				const resp = await fetch("https://www.swapi.tech/api/people/"+ uid)
+				const resp = await fetch("https://www.swapi.tech/api/people/"+uid)
 				const data = await resp.json()
-				setStore({ characterDetails: data.result })
+				setStore({ characterDetails: data.results })
 				console.log(data.result);
 			},
 			getVehiclesData: async () => {

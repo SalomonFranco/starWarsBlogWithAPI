@@ -12,10 +12,10 @@ export const Character = (props) => {
     return (
         <div className="card mx-3 col-4" style={{ width: "18rem" }}>
             <img className="card-img-top" src="https://thorntons-investments.co.uk/wp-content/uploads/2017/08/400x200.png"/>
-            <p className="fs-3">{props.el?.name}</p>
-            <p>Gender : {props.el?.gender}</p>
-            <p>Hair Color : {props.el?.hair_color}</p>
-            <p>Eye Color : {props.el?.eye_color}</p>
+            <p className="fs-3">{props.el.name}</p>
+            <p>Gender : {props.el.gender}</p>
+            <p>Hair Color : {props.el.hair_color}</p>
+            <p>Eye Color : {props.el.eye_color}</p>
             <div className="d-flex justify-content-between p-2">
                 <button className="btn btn-primary ms-3" onClick={e => navigate("/single/" + props.el.uid)}>Learn More!</button>
                 <button className="btn btn-outline-warning me-3" onClick={e => handleAddRemoveFav(e)}>

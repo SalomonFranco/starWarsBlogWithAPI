@@ -14,8 +14,8 @@ export const Planets = (props) => {
             <img className="card-img-top" src="https://thorntons-investments.co.uk/wp-content/uploads/2017/08/400x200.png"/>
             <p className="fs-3">{props.el?.name}</p>
             <p>Population : {props.el?.population}</p>
-            <p>Terrain: : {props.el?.terrain}</p>
-            <p>Climate: : {props.el?.climate}</p>
+            <p>Terrain : {props.el?.terrain}</p>
+            <p>Climate : {props.el?.climate}</p>
             <div className="d-flex justify-content-between p-2">
                 <button className="btn btn-primary ms-3" onClick={e => navigate("/single/" + props.el.uid)}>Learn More!</button>
                 <button className="btn btn-outline-warning me-3" onClick={e => handleAddRemoveFav(e)}>
