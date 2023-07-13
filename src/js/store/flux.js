@@ -1,42 +1,64 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+			//variables and data
+			favs: null,
+			characters: [],
+			characterDetails: null,
+			vehicles: [],
+			vehicleDetails: null,
+			planets: [],
+			planetDetails: null,
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
+			addRemoveFav: (newFav) => {
+				if(!getStore().favs) {
+					setStore({ favs: [newFav] })
+					return 
+				}
+				if (getStore().favs.indexOf(newFav) == -1) {
+					setStore({ favs: [...getStore().favs, newFav] })
+				} else {
+					const newList = getStore().favs.filter(el=> el != newFav)
+					setStore({ favs: newList })
+				}
 			},
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
+			getCharacterData: async () => {
+				const resp = await fetch("https://www.swapi.tech/api/people")
+				const data = await resp.json()
+				setStore({ characters: data.results })
+				console.log(data.results);
 			},
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
-
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
-
-				//reset the global store
-				setStore({ demo: demo });
+			getCharacterDetails: async (uid) => {
+				const resp = await fetch("https://www.swapi.tech/api/people/"+ uid)
+				const data = await resp.json()
+				setStore({ characterDetails: data.result })
+				console.log(data.result);
+			},
+			getVehiclesData: async () => {
+				const resp = await fetch("https://www.swapi.tech/api/starships")
+				const data = await resp.json()
+				setStore({ vehicles: data.results })
+				console.log(data.results);
+			},
+			getVehicleDetails: async (uid) => {
+				const resp = await fetch("https://www.swapi.tech/api/starships/"+ uid)
+				const data = await resp.json()
+				setStore({ vehicleDetails: data })
+				console.log(data);
+			},
+			getPlanetsData: async () => {
+				const resp = await fetch("https://www.swapi.tech/api/planets")
+				const data = await resp.json()
+				setStore({ planets: data.results })
+				console.log(data.results);
+			},
+			getPlanetDetails: async (uid) => {
+				const resp = await fetch("https://www.swapi.tech/api/planets/"+ uid)
+				const data = await resp.json()
+				setStore({ planetDetails: data })
+				console.log(data);
 			}
 		}
 	};
