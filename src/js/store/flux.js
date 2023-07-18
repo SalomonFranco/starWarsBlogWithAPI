@@ -4,11 +4,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			//variables and data
 			favs: null,
 			characters: [],
-			characterDetails: null,
 			vehicles: [],
-			vehicleDetails: null,
 			planets: [],
-			planetDetails: null,
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -30,35 +27,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ characters: data.results })
 				console.log(data.results);
 			},
-			getCharacterDetails: async (uid) => {
-				const resp = await fetch("https://www.swapi.tech/api/people/"+uid)
-				const data = await resp.json()
-				setStore({ characterDetails: data.results })
-				console.log(data.result);
-			},
 			getVehiclesData: async () => {
 				const resp = await fetch("https://www.swapi.tech/api/starships")
 				const data = await resp.json()
 				setStore({ vehicles: data.results })
 				console.log(data.results);
 			},
-			getVehicleDetails: async (uid) => {
-				const resp = await fetch("https://www.swapi.tech/api/starships/"+ uid)
-				const data = await resp.json()
-				setStore({ vehicleDetails: data })
-				console.log(data);
-			},
 			getPlanetsData: async () => {
 				const resp = await fetch("https://www.swapi.tech/api/planets")
 				const data = await resp.json()
 				setStore({ planets: data.results })
 				console.log(data.results);
-			},
-			getPlanetDetails: async (uid) => {
-				const resp = await fetch("https://www.swapi.tech/api/planets/"+ uid)
-				const data = await resp.json()
-				setStore({ planetDetails: data })
-				console.log(data);
 			}
 		}
 	};
