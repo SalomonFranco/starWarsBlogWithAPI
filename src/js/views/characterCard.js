@@ -3,19 +3,20 @@ import PropTypes from "prop-types";
 import { useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const Characters = (props) => {
+export const CharacterCard = () => {
 	const { store, actions } = useContext(Context);
     const [characterDetails, setCharacterDetails] = useState()
+	const param = useParams()
 
-   const getCharacterData = async () => {
-        const resp = await fetch("https://www.swapi.tech/api/people/")
-        const data = await resp.json()
-        setCharacterDetails(data.result.properties)
-    }
+    const getCharacterData = async () => {
+         const resp = await fetch("https://www.swapi.tech/api/people/"+param.id)
+         const data = await resp.json()
+	        setCharacterDetails(data.result.properties)
+     }
 
-	useEffect(() => {
-		getCharacterData(props.el.uid)
-	},[])
+ 	useEffect(() => {
+ 		getCharacterData()
+ 	},[])
 
 	return (
 		<div className="container d-flex">

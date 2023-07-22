@@ -3,18 +3,19 @@ import PropTypes from "prop-types";
 import { useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const Planets = (props) => {
+export const PlanetsCard = () => {
 	const { store, actions } = useContext(Context);
     const [ planetsDetails, setPlanetsDetails] = useState()
+	const param = useParams()
 
    const getPlanetsData = async () => {
-        const resp = await fetch("https://www.swapi.tech/api/planets")
+        const resp = await fetch("https://www.swapi.tech/api/planets/"+param.id)
         const data = await resp.json()
         setPlanetsDetails(data.result.properties)
     }
 
 	useEffect(() => {
-		getPlanetsData(props.el.uid)
+		getPlanetsData()
 	},[])
 
 	return (
@@ -26,11 +27,11 @@ export const Planets = (props) => {
 
 		<div className="container">
 			<p>Name {planetsDetails && planetsDetails.name}</p>
-			<p>Birth Year {planetsDetails && planetsDetails.birth_year}</p>
-			<p>Gender {planetsDetails && planetsDetails.gender}</p>
-			<p>Height {planetsDetails && planetsDetails.height}</p>
-			<p>Skin Color {planetsDetails && planetsDetails.skin_color}</p>
-			<p>Eye Color {planetsDetails && planetsDetails.eye_color}</p>
+			<p>Population {planetsDetails && planetsDetails.population}</p>
+			<p>Climate {planetsDetails && planetsDetails.climate}</p>
+			<p>Terrain {planetsDetails && planetsDetails.terrain}</p>
+			<p>Diameter {planetsDetails && planetsDetails.diameter}</p>
+			<p>Gravity {planetsDetails && planetsDetails.gravity}</p>
 		</div>
 		</div>
 	);

@@ -3,18 +3,19 @@ import PropTypes from "prop-types";
 import { useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const Vehicles = (props) => {
+export const VehiclesCard = () => {
 	const { store, actions } = useContext(Context);
     const [vehiclesDetails, setVehiclesDetails] = useState()
+	const param = useParams()
 
    const getVehiclesData = async () => {
-        const resp = await fetch("https://www.swapi.tech/api/starships")
+        const resp = await fetch("https://www.swapi.tech/api/people/"+param.id)
         const data = await resp.json()
         setVehiclesDetails(data.result.properties)
     }
 
 	useEffect(() => {
-		getVehiclesData(props.el.uid)
+		getVehiclesData()
 	},[])
 
 	return (
