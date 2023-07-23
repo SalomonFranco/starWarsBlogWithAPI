@@ -9,7 +9,7 @@ export const VehiclesCard = () => {
 	const param = useParams()
 
    const getVehiclesData = async () => {
-        const resp = await fetch("https://www.swapi.tech/api/people/"+param.id)
+        const resp = await fetch("https://www.swapi.tech/api/starships/"+param.id)
         const data = await resp.json()
         setVehiclesDetails(data.result.properties)
     }
@@ -17,22 +17,55 @@ export const VehiclesCard = () => {
 	useEffect(() => {
 		getVehiclesData()
 	},[])
-
+		
 	return (
 		<div className="container d-flex">
+			<div className="container">
+				<h2>{vehiclesDetails && vehiclesDetails.name} {vehiclesDetails && vehiclesDetails.description} </h2>	
+				<img src="https://www.premiere-urgence.org/wp-content/uploads/2021/11/800x400.png" className="img-fluid"/>
+			</div>
 		<div className="container">
-			<h2>{vehiclesDetails && vehiclesDetails.name} {vehiclesDetails && vehiclesDetails.description} </h2>
-			<img src="https://www.premiere-urgence.org/wp-content/uploads/2021/11/800x400.png" alt={store.char?.name} className="img-fluid"/>
-		</div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<div className="container-flex">
+			<div className="row d-flex category-fact-container">
 
-		<div className="container">
-			<p>Name {vehiclesDetails && vehiclesDetails.name}</p>
-			<p>Birth Year {vehiclesDetails && vehiclesDetails.birth_year}</p>
-			<p>Gender {vehiclesDetails && vehiclesDetails.gender}</p>
-			<p>Height {vehiclesDetails && vehiclesDetails.height}</p>
-			<p>Skin Color {vehiclesDetails && vehiclesDetails.skin_color}</p>
-			<p>Eye Color {vehiclesDetails && vehiclesDetails.eye_color}</p>
+					<div className="col-sm-4 col-md-2">
+						<p><strong>Model:</strong></p> 
+						<p className="fact-text">{vehiclesDetails && vehiclesDetails.model}</p>
+					</div>
+
+					<div className="col-sm-4 col-md-2">
+						<p><strong>Class:</strong></p> 
+						<p className="fact-text">{vehiclesDetails && vehiclesDetails.starship_class}</p>
+					</div>
+
+					<div className="col-sm-4 col-md-2">
+						<p><strong>Manufacturer:</strong></p> 
+						<p className="fact-text">{vehiclesDetails && vehiclesDetails.manufacturer}</p>
+					</div>
+
+					<div className="col-sm-4 col-md-2">
+						<p><strong>Crew:</strong></p> 
+						<p className="fact-text">{vehiclesDetails && vehiclesDetails.crew}</p>
+					</div>
+
+					<div className="col-sm-4 col-md-2">
+						<p><strong>Passengers:</strong></p> 
+						<p className="fact-text">{vehiclesDetails && vehiclesDetails.passengers}</p>
+					</div>
+
+					<div className="col-sm-4 col-md-2">
+						<p><strong>Cargo Capacity:</strong></p> 
+						<p className="fact-text">{vehiclesDetails && vehiclesDetails.cargo_capacity}</p>
+					</div>
+				</div>
+			</div>
 		</div>
 		</div>
 	);
 };
+
+// "model":"CR90 corvette","starship_class":"corvette",
+// "manufacturer":"Corellian Engineering Corporation","cost_in_credits":"3500000","length":"150",
+// "crew":"30-165","passengers":"600","max_atmosphering_speed":"950","hyperdrive_rating":"2.0","MGLT":"60",
+// "cargo_capacity":"3000000","consumables":"1 year","pilots"

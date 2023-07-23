@@ -19,19 +19,47 @@ export const CharacterCard = () => {
  	},[])
 
 	return (
-		<div className="container d-flex">
+<div className="container d-flex">
+			<div className="container">
+				<h2>{characterDetails && characterDetails.name} {characterDetails && characterDetails.description} </h2>	
+				<img src="https://www.premiere-urgence.org/wp-content/uploads/2021/11/800x400.png" className="img-fluid"/>
+			</div>
 		<div className="container">
-			<h2>{characterDetails && characterDetails.name} {characterDetails && characterDetails.description} </h2>
-			<img src="https://www.premiere-urgence.org/wp-content/uploads/2021/11/800x400.png" alt={store.char?.name} className="img-fluid"/>
-		</div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<div className="container-flex">
+			<div className="row d-flex category-fact-container">
 
-		<div className="container">
-			<p>Name {characterDetails && characterDetails.name}</p>
-			<p>Birth Year {characterDetails && characterDetails.birth_year}</p>
-			<p>Gender {characterDetails && characterDetails.gender}</p>
-			<p>Height {characterDetails && characterDetails.height}</p>
-			<p>Skin Color {characterDetails && characterDetails.skin_color}</p>
-			<p>Eye Color {characterDetails && characterDetails.eye_color}</p>
+					<div className="col-sm-4 col-md-2">
+						<p><strong>Name:</strong></p> 
+						<p className="fact-text">{characterDetails && characterDetails.name}</p>
+					</div>
+
+					<div className="col-sm-4 col-md-2">
+						<p><strong>Birth Year:</strong></p> 
+						<p className="fact-text">{characterDetails && characterDetails.birth_year}</p>
+					</div>
+
+					<div className="col-sm-4 col-md-2">
+						<p><strong>Gender:</strong></p> 
+						<p className="fact-text">{characterDetails && characterDetails.gender}</p>
+					</div>
+
+					<div className="col-sm-4 col-md-2">
+						<p><strong>Height:</strong></p> 
+						<p className="fact-text">{characterDetails && characterDetails.height}</p>
+					</div>
+
+					<div className="col-sm-4 col-md-2">
+						<p><strong>Skin Color:</strong></p> 
+						<p className="fact-text">{characterDetails && characterDetails.skin_color}</p>
+					</div>
+
+					<div className="col-sm-4 col-md-2">
+						<p><strong>Eye Color:</strong></p> 
+						<p className="fact-text">{characterDetails && characterDetails.eye_color}</p>
+					</div>
+				</div>
+			</div>
 		</div>
 		</div>
 	);
