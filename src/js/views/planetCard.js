@@ -20,19 +20,47 @@ export const PlanetsCard = () => {
 
 	return (
 		<div className="container d-flex">
+			<div className="container">
+				<h2>{planetsDetails && planetsDetails.name} {planetsDetails && planetsDetails.description} </h2>	
+				<img src="https://www.premiere-urgence.org/wp-content/uploads/2021/11/800x400.png" className="img-fluid"/>
+			</div>
 		<div className="container">
-			<h2>{planetsDetails && planetsDetails.name} {planetsDetails && planetsDetails.description} </h2>
-			<img src="https://www.premiere-urgence.org/wp-content/uploads/2021/11/800x400.png" alt={store.char?.name} className="img-fluid"/>
-		</div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<div className="container-flex">
+			<div className="row d-flex category-fact-container">
 
-		<div className="container">
-			<p>Name {planetsDetails && planetsDetails.name}</p>
-			<p>Population {planetsDetails && planetsDetails.population}</p>
-			<p>Climate {planetsDetails && planetsDetails.climate}</p>
-			<p>Terrain {planetsDetails && planetsDetails.terrain}</p>
-			<p>Diameter {planetsDetails && planetsDetails.diameter}</p>
-			<p>Gravity {planetsDetails && planetsDetails.gravity}</p>
+					<div className="col-sm-4 col-md-2">
+						<p><strong>Name:</strong></p> 
+						<p className="fact-text">{planetsDetails && planetsDetails.name}</p>
+					</div>
+
+					<div className="col-sm-4 col-md-2">
+						<p><strong>Climate:</strong></p> 
+						<p className="fact-text">{planetsDetails && planetsDetails.climate}</p>
+					</div>
+
+					<div className="col-sm-4 col-md-2">
+						<p><strong>Terrain:</strong></p> 
+						<p className="fact-text">{planetsDetails && planetsDetails.terrain}</p>
+					</div>
+
+					<div className="col-sm-4 col-md-2">
+						<p><strong>Climate:</strong></p> 
+						<p className="fact-text">{planetsDetails && planetsDetails.climate}</p>
+					</div>
+
+					<div className="col-sm-4 col-md-2">
+						<p><strong>Gravity:</strong></p> 
+						<p className="fact-text">{planetsDetails && planetsDetails.gravity}</p>
+					</div>
+
+					<div className="col-sm-4 col-md-2">
+						<p><strong>Rotation Period:</strong></p> 
+						<p className="fact-text">{planetsDetails && planetsDetails.rotation_period}</p>
+					</div>
+				</div>
+			</div>
 		</div>
 		</div>
-	);
-};
+		);
+	};
