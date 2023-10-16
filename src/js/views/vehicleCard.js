@@ -25,7 +25,7 @@ export const VehiclesCard = () => {
 				<img src="https://www.premiere-urgence.org/wp-content/uploads/2021/11/800x400.png" className="img-fluid"/>
 			</div>
 		<div className="container">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>In the vast expanse of the "Star Wars" universe, a diverse array of vehicles enriches the galactic tapestry with both technological marvels and iconic modes of transport. From the agile X-wing starfighters and colossal Imperial Star Destroyers to the rugged Millennium Falcon, these vehicles embody the factions and stories within the saga. Droids like astromechs serve as indispensable companions, while speeder bikes, walkers, and landspeeders traverse varied terrains. The galaxy's vehicles, with their blend of futuristic technology and vintage aesthetics, contribute to the visual spectacle and immersive storytelling, becoming integral elements in the ever-evolving journey through a galaxy far, far away.</p>
 			<div className="container-flex">
 			<div className="row d-flex category-fact-container">
 
