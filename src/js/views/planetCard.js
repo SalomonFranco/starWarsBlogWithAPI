@@ -25,7 +25,7 @@ export const PlanetsCard = () => {
 				<img src="https://www.premiere-urgence.org/wp-content/uploads/2021/11/800x400.png" className="img-fluid"/>
 			</div>
 		<div className="container">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>In the expansive realm of "Star Wars," a breathtaking diversity of planets sets the stage for epic tales. From the deserts of Tatooine to the lush forests of Endor, each planet boasts a unique ecosystem and cultural richness. Iconic locales like the icy Hoth and the bustling city-planet Coruscant offer stark contrasts, reflecting the galaxy's multifaceted nature. Whether it's the remote, swampy Dagobah or the gas giant Bespin with its floating Cloud City, these planets serve as more than mere backdrops—they are integral to the narrative, shaping the destinies of heroes and villains alike. As characters traverse the galaxy, encountering the arid sands of Jakku or the oceanic depths of Kamino, the planets of "Star Wars" become not just settings but immersive worlds, each contributing to the grandeur of this timeless saga.</p>
 			<div className="container-flex">
 			<div className="row d-flex category-fact-container">
 

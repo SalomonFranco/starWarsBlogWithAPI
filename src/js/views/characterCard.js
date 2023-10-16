@@ -25,7 +25,7 @@ export const CharacterCard = () => {
 				<img src="https://www.premiere-urgence.org/wp-content/uploads/2021/11/800x400.png" className="img-fluid"/>
 			</div>
 		<div className="container">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>In the expansive universe of "Star Wars," characters are dynamic entities shaped by unique backgrounds, affiliations, and the ever-present Force. Aligned with the noble Jedi Order, malevolent Sith, or various factions, they exhibit strengths, flaws, and virtues that contribute to the saga's depth. Droids provide indispensable support, and relationships, whether familial or forged in conflict, add layers of emotion. As the galaxy grapples with the eternal conflict between light and dark, characters become entangled in interconnected destinies, marked by choices, sacrifices, and the ongoing pursuit of balance. "Star Wars" characters, whether in Jedi robes or Sith armor, form the heart of a timeless saga, leaving an indelible mark on the collective imagination.</p>
 			<div className="container-flex">
 			<div className="row d-flex category-fact-container">
 
